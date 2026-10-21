@@ -1,0 +1,6 @@
+# Only track the code and its inputs; ignore everything else (report, outputs, *.md, tooling)
+*
+!.gitignore
+!code.py
+!inputs/
+!inputs/**
