@@ -402,6 +402,7 @@ if __name__ == "__main__":
         flow_df[p].insert(0, "period", p)
         flow_df[p]["flow"] = (theta_from - theta_to) / lines_df["x"] * S_BASE
         flow_df[p]["within_limit"] = abs(flow_df[p]["flow"]) <= flow_df[p]["max_power"]
+        flow_df[p]["overload%"] = abs(flow_df[p]["flow"]) / flow_df[p]["max_power"] * 100
 
         # pandas aligns the three Series by node; nodes missing in one get 0
     
